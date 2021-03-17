@@ -1,0 +1,32 @@
+name: 中青看点分享
+
+on:
+  workflow_dispatch:
+  watch:
+    types: started
+  schedule:
+    - cron: '32,55 8,9,10 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest       
+    steps:
+      - name: Checkout
+        run: |
+          git clone https://github.com/r0ckrise/Self_Actions.git ~/Self_Actions
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: npm install
+        run: |
+          cd ~/Self_Actions
+          npm install
+          npm install cron
+          npm install request
+          npm install md5-node
+      - name: '运行 【中青看点分享】'
+        run: |
+          cd ~/Self_Actions
+          node Scripts/youthshare.js
+    env:
+      TZ: Asia/shanghai
