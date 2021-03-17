@@ -32,4 +32,4 @@ jobs:
             TG_USER_ID: ${{ secrets.TG_USER_ID }}  #非必须 tg机器人userId
             DD_BOT_ACCESS_TOKEN: ${{ secrets.DD_BOT_ACCESS_TOKEN }}  #非必须 钉钉机器人token
             DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}  #非必须 钉钉机器人secret
-            TZ: Asia/shanghai
+            
