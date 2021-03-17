@@ -1,10 +1,10 @@
 
-name: 百度极速版
+name: 百度极速版2
 
 on:
-  workflow_dispatch:
-  schedule:
-     - cron: '*/30 * * * *'
+#  workflow_dispatch:
+#  schedule:
+#     - cron: '*/10 * * * *'
   watch:
     types: started
 jobs:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        BAIDU_COOKIE: ${{ secrets.BAIDU_COOKIE }}
+        BAIDU_COOKIE: ${{ secrets.BAIDU_COOKIE2 }}
         TZ: Asia/shanghai
     steps:
       - name: Checkout

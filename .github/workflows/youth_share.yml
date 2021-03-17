@@ -28,5 +28,5 @@ jobs:
         run: |
           cd ~/Self_Actions
           node Scripts/youthshare.js
-    env:
-      TZ: Asia/shanghai
+        env:
+        TZ: Asia/shanghai
